@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Carrinho</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+    <h2 class="logo">SPORTX</h2>
+
+    <div class="menu-links">
+      <a href="index.html">Início</a>
+    </div>
+  </nav>
+
+  <section class="carrinho-page">
+
+    <div class="carrinho-esquerda">
+
+      <h1>Seu Carrinho</h1>
+
+      <div id="lista-carrinho"></div>
+
+      <div class="frete-box">
+        <h3>Calcule o frete</h3>
+
+        <div class="input-linha">
+          <input type="text" placeholder="Digite o CEP">
+          <button>Calcular</button>
+        </div>
+      </div>
+
+      <div class="cupom-box">
+        <h3>Cupom de desconto</h3>
+
+        <div class="input-linha">
+          <input type="text" placeholder="Digite o cupom">
+          <button>Adicionar</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resumo-carrinho">
+
+      <h2>Resumo do pedido</h2>
+
+      <div class="linha-resumo">
+        <span>Produtos</span>
+        <strong>R$ <span id="subtotal">0.00</span></strong>
+      </div>
+
+      <div class="linha-resumo">
+        <span>Desconto</span>
+        <strong class="verde">-R$ <span id="desconto">0.00</span></strong>
+      </div>
+
+      <div class="linha-total">
+        <span>Total</span>
+        <strong>R$ <span id="total">0.00</span></strong>
+      </div>
+
+      <button class="btn-continuar" onclick="mostrarPagamentoPaypal()">
+        Finalizar compra
+      </button>
+
+      <div id="area-pagamento" class="area-pagamento">
+        <h3>Forma de pagamento</h3>
+        <p>Pague com segurança usando PayPal.</p>
+
+        <div id="paypal-button-container"></div>
+      </div>
+
+      <a href="index.html" class="buscar-produtos">
+        Buscar mais produtos
+      </a>
+
+    </div>
+
+  </section>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AUcZCoJFAGJfLIfusrs6slOyhABDGolIv4QI9s7jqsJO8aa_yH1YhwwuXS0dPQt1FGpbMbqRUtCdeE0Y"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+    atualizarCarrinho();
+
+    function mostrarPagamentoPaypal(){
+      let areaPagamento = document.getElementById("area-pagamento");
+
+      if(carrinho.length <= 0){
+        alert("Seu carrinho está vazio!");
+        return;
+      }
+
+      areaPagamento.style.display = "block";
+
+      mostrarBotaoPaypal();
+    }
+  </script>
+
+</body>
+</html>

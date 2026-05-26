@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Produto</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav>
+
+    <h2 class="logo">SPORTX</h2>
+
+    <div class="menu-links">
+      <a href="index.html">Início</a>
+
+      <a href="carrinho.html" class="link-carrinho">
+        <img src="img/carrinho-compra.png" alt="Carrinho" class="icone-carrinho">
+      </a>
+    </div>
+
+  </nav>
+
+  <section class="produto-page">
+
+    <div class="produto-imagem-area">
+      <img id="produto-imagem" alt="Produto">
+    </div>
+
+    <div class="produto-info-area">
+
+      <span id="produto-categoria" class="categoria-produto"></span>
+
+      <h1 id="produto-nome"></h1>
+
+      <p class="produto-de">
+        De: <span id="produto-preco-antigo">R$ 299,99</span>
+      </p>
+
+      <div class="produto-preco-box">
+        <span id="produto-preco" class="preco-vermelho"></span>
+        <span class="desconto">-40%</span>
+      </div>
+
+      <p class="parcelamento">
+        ou R$ <span id="produto-parcela"></span> em 2x sem juros
+      </p>
+
+      <p id="produto-estoque" class="estoque-produto"></p>
+
+      <p id="produto-descricao" class="descricao-produto"></p>
+
+      <div class="produto-cor">
+        <strong>Cor do produto:</strong>
+        <span>Preto/branco</span>
+
+        <div class="miniatura-cor">
+          <img id="produto-miniatura" alt="Miniatura">
+        </div>
+      </div>
+
+      <div class="produto-tamanho-area">
+
+        <h3>Tamanho do produto:</h3>
+
+        <div id="produto-tamanhos" class="area-tamanhos"></div>
+
+      </div>
+
+      <div class="produto-botoes-extra">
+
+        <button class="btn-extra">
+          Provador virtual
+        </button>
+
+        <button class="btn-extra">
+          Tabela de medidas
+        </button>
+
+      </div>
+
+      <p class="vendedor">
+        Vendido e entregue por <strong>SPORTX</strong> ✔
+      </p>
+
+      <button id="btn-comprar-agora">
+        Comprar agora
+      </button>
+
+      <button id="btn-adicionar">
+        Adicionar ao carrinho
+      </button>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+  <script src="produto.js"></script>
+
+</body>
+
+</html>
